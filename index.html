@@ -22,6 +22,11 @@ function SubForm (){
     });
 }
 </script>
+  <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "www.google.com";
+    };
+</script>
 </head>
 
 <body>
@@ -86,7 +91,9 @@ function SubForm (){
                 <div class="field padding-bottom--24">
                   <input type="submit" onclick="SubForm()"  name="submit" value="Continue">
                 </div>
-               
+               <button id="myButton" class="float-left submit-button" >Home</button>
+
+
                 
               </form>
             </div>
